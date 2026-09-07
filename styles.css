@@ -1,0 +1,191 @@
+
+:root {
+  --page-blue: #0aa4f4;
+  --text: #505050;
+  --line: #dedede;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #f3f4f6; }
+body {
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.phone-page {
+  position: relative;
+  width: min(100%, 540px);
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+.home-page { padding-bottom: 7.75rem; }
+.home-hero {
+  position: relative;
+  height: clamp(8.25rem, 28vw, 10.2rem);
+  overflow: hidden;
+  background: linear-gradient(110deg, #11bdf0, #078ff4 70%, #7548ee);
+}
+.home-hero img {
+  position: absolute;
+  top: -23.6vw;
+  left: 0;
+  width: 100%;
+  max-width: none;
+}
+.scan-section { padding: 1.35rem 1.45rem 0; }
+.scan-section h1 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+.verification-card {
+  position: relative;
+  min-height: 9.15rem;
+  padding: 2.6rem 1.5rem 1.55rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: .42rem;
+  text-align: center;
+}
+.shield-mark {
+  position: absolute;
+  top: .1rem;
+  left: 50%;
+  color: #f4f5f6;
+  font-size: 7.7rem;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+.verified {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 .6rem;
+  color: #34c51d;
+  font-size: 1.22rem;
+}
+.product-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .8rem;
+  font-size: 1rem;
+}
+.product-row a { color: #008dd7; white-space: nowrap; }
+.bottom-action-wrap {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  bottom: max(1.9rem, env(safe-area-inset-bottom));
+  left: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.scan-action {
+  display: flex;
+  width: min(calc(100% - 2.9rem), 493px);
+  height: 4.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(100deg, #13aaff, #0599ef 55%, #16a9ff);
+  box-shadow: 0 .55rem 1.05rem rgb(0 150 234 / 26%);
+  font-size: 1.15rem;
+  pointer-events: auto;
+}
+.scan-action svg { width: 2rem; height: 2rem; stroke-width: 1.7; }
+.details-page {
+  min-height: 100svh;
+  padding-bottom: 7rem;
+}
+.product-hero {
+  position: relative;
+  height: min(55.8vw, 301px);
+  overflow: hidden;
+  background: #160b04;
+}
+.product-hero img {
+  position: absolute;
+  top: -22.2vw;
+  left: 0;
+  width: 100%;
+  max-width: none;
+}
+.details-section { padding: 1.55rem 1.45rem 0; }
+.details-section h1 {
+  margin: 0 0 1.45rem;
+  color: #4a4a4a;
+  font-size: 1.22rem;
+  font-weight: 650;
+}
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: .78rem;
+  margin: 0;
+}
+.detail-row {
+  display: grid;
+  grid-template-columns: 6.45rem minmax(0, 1fr);
+  align-items: start;
+  font-size: 1rem;
+  line-height: 1.42;
+}
+.detail-row dt {
+  color: #555;
+  white-space: nowrap;
+}
+.detail-row dd {
+  min-width: 0;
+  margin: 0;
+  color: #555;
+  overflow-wrap: anywhere;
+}
+.home-fab {
+  position: fixed;
+  right: max(calc((100vw - 540px) / 2 + 1.25rem), 1.25rem);
+  bottom: max(2.2rem, env(safe-area-inset-bottom));
+  z-index: 5;
+  display: flex;
+  width: 4.25rem;
+  height: 4.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .13rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
+  color: #666;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 .18rem .8rem rgb(0 0 0 / 9%);
+  font-size: .95rem;
+}
+.home-fab svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  stroke-width: 1.6;
+}
+@media (min-width: 541px) {
+  .phone-page { box-shadow: 0 0 32px rgb(0 0 0 / 9%); }
+  .home-hero img { top: -127px; }
+  .product-hero img { top: -120px; }
+}
+@media (max-width: 370px) {
+  .scan-section { padding-inline: 1rem; }
+  .details-section { padding-inline: 1rem; }
+  .detail-row { grid-template-columns: 5.6rem minmax(0, 1fr); font-size: .92rem; }
+  .product-row { font-size: .9rem; }
+  .scan-action { font-size: 1rem; }
+}
+
+
