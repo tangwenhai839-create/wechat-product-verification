@@ -24,28 +24,29 @@ button { font: inherit; }
 .home-page { padding-bottom: 7.75rem; }
 .home-hero {
   position: relative;
-  height: clamp(8.25rem, 28vw, 10.2rem);
+  height: min(27.8vw, 150px);
   overflow: hidden;
   background: linear-gradient(110deg, #11bdf0, #078ff4 70%, #7548ee);
 }
 .home-hero img {
   position: absolute;
-  top: -23.6vw;
+  top: max(-21.85vw, -118px);
   left: 0;
   width: 100%;
   max-width: none;
 }
-.scan-section { padding: 1.35rem 1.45rem 0; }
+.scan-section { padding: 1rem 1rem 0; }
 .scan-section h1 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
+  margin: 0 0 .55rem;
+  font-size: 1rem;
+  line-height: 1.4;
   font-weight: 400;
   letter-spacing: .04em;
 }
 .verification-card {
   position: relative;
-  min-height: 9.15rem;
-  padding: 2.6rem 1.5rem 1.55rem;
+  min-height: 6.55rem;
+  padding: 1.65rem .85rem 1.3rem;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: .42rem;
@@ -53,20 +54,20 @@ button { font: inherit; }
 }
 .shield-mark {
   position: absolute;
-  top: .1rem;
+  top: 50%;
   left: 50%;
   color: #f4f5f6;
-  font-size: 7.7rem;
-  font-weight: 800;
+  font-size: 5.5rem;
+  font-weight: 700;
   line-height: 1;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 .verified {
   position: relative;
   z-index: 1;
-  margin: 0 0 .6rem;
+  margin: 0 0 .35rem;
   color: #34c51d;
-  font-size: 1.22rem;
+  font-size: 1rem;
 }
 .product-row {
   position: relative;
@@ -74,8 +75,8 @@ button { font: inherit; }
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: .8rem;
-  font-size: 1rem;
+  gap: .65rem;
+  font-size: .94rem;
 }
 .product-row a { color: #008dd7; white-space: nowrap; }
 .bottom-action-wrap {
@@ -90,20 +91,20 @@ button { font: inherit; }
 }
 .scan-action {
   display: flex;
-  width: min(calc(100% - 2.9rem), 493px);
-  height: 4.25rem;
+  width: min(calc(100% - 2rem), 508px);
+  height: 3rem;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: .75rem;
   border: 0;
   border-radius: 999px;
   color: white;
   background: linear-gradient(100deg, #13aaff, #0599ef 55%, #16a9ff);
   box-shadow: 0 .55rem 1.05rem rgb(0 150 234 / 26%);
-  font-size: 1.15rem;
+  font-size: 1rem;
   pointer-events: auto;
 }
-.scan-action svg { width: 2rem; height: 2rem; stroke-width: 1.7; }
+.scan-action svg { width: 1.6rem; height: 1.6rem; fill: none; stroke: currentColor; stroke-width: 1.7; }
 .details-page {
   min-height: 100svh;
   padding-bottom: 7rem;
@@ -177,7 +178,6 @@ button { font: inherit; }
 }
 @media (min-width: 541px) {
   .phone-page { box-shadow: 0 0 32px rgb(0 0 0 / 9%); }
-  .home-hero img { top: -127px; }
   .product-hero img { top: -120px; }
 }
 @media (max-width: 370px) {
@@ -187,5 +187,3 @@ button { font: inherit; }
   .product-row { font-size: .9rem; }
   .scan-action { font-size: 1rem; }
 }
-
-
